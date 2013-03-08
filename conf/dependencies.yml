@@ -18,6 +18,6 @@ repositories:
             
     - akka:
         type: iBiblio
-        root: "http://repo.typesafe.com/typesafe/akka-releases-cache/"
+        root: "http://repo.akka.io/releases"
         contains:
             - se.scalablesolutions.akka -> *

@@ -90,7 +90,7 @@ public class ReindexDatabaseJob extends Job<Void> {
                 final List results = factory.fetch((int) offset, PAGE_SIZE, null, null, null, null, null);
                 // loop over individual entities within one page
                 for (final Object o : results) {
-                    ElasticSearch.index((Model) initializeAndUnproxy(o), deliveryMode);
+                    ElasticSearch.index((play.db.jpa.Model) initializeAndUnproxy(o), deliveryMode);
                 }
                 offset += PAGE_SIZE;
             }
